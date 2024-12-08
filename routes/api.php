@@ -8,3 +8,4 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::post('/telegram-webhook', [TelegramController::class, 'handleWebhook']);
+Route::post('/get-idchat', [TelegramController::class, 'getChatIds']);
